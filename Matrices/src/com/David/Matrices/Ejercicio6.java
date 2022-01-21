@@ -9,16 +9,15 @@ import java.util.Scanner;
  * @author David
  *
  */
-public class Ejercicio2 {
+public class Ejercicio6 {
 
 	/**
-	 * 2. Dado un array de tamaño (N,M) de enteros, decir si todos sus elementos son cero.
+	 * 6. Dado un array de tamaño (N,M) de enteros, buscar el máximo valor almacenado. 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
 		Scanner entrada = new Scanner (System.in);
-		
 		
 		System.out.println("Cuantas filas quieres?:");
 		int filas = entrada.nextInt();
@@ -27,29 +26,18 @@ public class Ejercicio2 {
 		System.out.println("Cuantas columnas quieres?:");
 		int columnas = entrada.nextInt();
 		
-		int matriz[][]=new int[filas][columnas];
-
+		int matriz[][] = new int[filas][columnas];
+		
 		
 		Matrices.pedir_matriz(matriz);
-		
+		System.out.println("Tu matriz es:");
 		Matrices.mostrar_matriz(matriz);
 		
-		boolean ceros= Matrices.valor0(matriz);
-		
-		if (ceros) 
-			System.out.println("Todos los elementos son cero");
-		else 
-			System.out.println("No son ceros");
-		
+		int mayor = Matrices.mayorvalor(matriz);
+		System.out.println("El mayor valor de la matriz es: "+ mayor);
 		
 	
 		
-		
-		
-		
-		
-		
-	
 
 	}
 

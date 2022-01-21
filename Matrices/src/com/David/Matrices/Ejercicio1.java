@@ -29,6 +29,9 @@ public class Ejercicio1 {
 	System.out.println("Cuantas columnas quieres?:");
 	int columnas = entrada.nextInt();
 	
+	int matriz[][]=new int[filas][columnas];
+
+	
 	
 	System.out.println("Cual es el valor de A");
 	int a= entrada.nextInt();
@@ -36,7 +39,9 @@ public class Ejercicio1 {
 
 	
 	System.out.println("Tu matriz es:");
-	Matrices.valor(filas,columnas,a);
+	Matrices.valor(matriz,a);
+	
+	Matrices.mostrar_matriz(matriz);
 	
 	
 	

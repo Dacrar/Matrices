@@ -9,16 +9,17 @@ import java.util.Scanner;
  * @author David
  *
  */
-public class Ejercicio2 {
+public class ejercicio9 {
 
 	/**
-	 * 2. Dado un array de tamaño (N,M) de enteros, decir si todos sus elementos son cero.
+	 * 9. Dada un array de tamaño (M,N) de reales, almacenarlo sobre otro array de tamaño 
+		  (N,M) de forma transpuesta, es decir, el elemento (1,2) del primer array se almacenará 
+		  en el elemento (2,1) del segundo.
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
 		Scanner entrada = new Scanner (System.in);
-		
 		
 		System.out.println("Cuantas filas quieres?:");
 		int filas = entrada.nextInt();
@@ -27,30 +28,17 @@ public class Ejercicio2 {
 		System.out.println("Cuantas columnas quieres?:");
 		int columnas = entrada.nextInt();
 		
-		int matriz[][]=new int[filas][columnas];
-
+		int matriz[][] = new int[filas][columnas];
 		
 		Matrices.pedir_matriz(matriz);
-		
+		System.out.println("Tu matriz es:");
 		Matrices.mostrar_matriz(matriz);
 		
-		boolean ceros= Matrices.valor0(matriz);
-		
-		if (ceros) 
-			System.out.println("Todos los elementos son cero");
-		else 
-			System.out.println("No son ceros");
+		int matriz2[][] = Matrices.matriztraspuesta(matriz);
 		
 		
-	
-		
-		
-		
-		
-		
-		
-	
-
+		System.out.println();
+		Matrices.mostrar_matriz(matriz2);
 	}
 
 }
