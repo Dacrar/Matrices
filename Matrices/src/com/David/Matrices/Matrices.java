@@ -168,18 +168,48 @@ public class Matrices {
 	
 	
 	public static String letradni(int dni) {
-		final String[] letras = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E","N"};
-		
+		final char [] letras_dni = {'T', 'R', 'W', 'A', 'G', 'M','Y', 'F', 'P','D',
+                'X','B','N', 'J','Z','S','Q','V','H','L', 'C','K',
+                'E','N'};
 		int resto = dni %23;
-		return String.valueOf(dni)+"-"+ letras[resto];
+		return String.valueOf(dni)+"-"+ letras_dni[resto];
 		
 			}
 			
 		
+		public static void media_filas(double m[][], double v[]) {
+		double suma = 0;
+			for (int i = 0; i < m.length; i++) {
+				suma=0;
+				for (int j = 0; j < m[0].length; j++) {
+					suma=suma+m[i][j];
+				}
+				v[i]=suma/m[0].length;
+			}
+		}
 		
-		
-		
+		public static void media_columnas(double m[][], double v[]) {
+			double	suma = 0;
+			for (int j = 0; j < m[0].length; j++) {
+				suma=0;
+					for (int i = 0; i < m.length; i++) {
+						suma=suma+m[i][j];
+					}
+					v[j]=suma/m[0].length;
+				}
+			}
 
-	
+	public static int num_aciertos(int ganadora[], int apuesta[]) {
+		int aciertos =0;
+		
+			for (int i = 0; i < apuesta.length; i++) {
+				for (int j = 0; j < ganadora.length; j++) {
+					if (apuesta[i]==ganadora[j]) {
+						aciertos++;
+					}
+				}
+			}
+			return aciertos;
+	}
 	
 	}

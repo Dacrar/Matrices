@@ -25,6 +25,11 @@ public class ejerciciodni {
 		System.out.println("Introduce el dni sin la letra");
 		int dni = entrada.nextInt();
 		
+		 String dniconletra = Matrices.letradni(dni);
+		 
+		 
+		 System.out.println("Tu dni con letra es: " + dniconletra );
+
 		
 		
 		
